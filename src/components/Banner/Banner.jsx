@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { GoArrowLeft } from "react-icons/go";
 
 export default function Banner() {
   return (
@@ -41,6 +42,11 @@ export default function Banner() {
           <button className="px-3 py-1.5 lg:px-6 lg:py-3 rounded-sm text-white font-semibold border border-white cursor-pointer hover:bg-white hover:text-black hover:border-white transition">
             Latest Project
           </button>
+        </div>
+
+        <div className="space-x-4 flex justify-center lg:justify-end items-center lg:absolute bottom-15 right-20 mt-3 lg:mt-0">
+          <button className="bg-[#FFFFFF33] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft /></button>
+          <button className="bg-[#FF3811] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft className="transform rotate-180" /></button>
         </div>
 
       </div>
