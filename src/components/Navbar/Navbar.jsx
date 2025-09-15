@@ -150,7 +150,7 @@ export default function Navbar() {
 
                 {/* other btn */}
                 <div className="flex justify-center">
-                  <button className="text-[#FF3811] font-semibold text-base px-4 py-1.5 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer">
+                  <button className="text-[#FF3811] font-semibold text-base px-4 py-1.5 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer transition">
                     Appointment
                   </button>
                 </div>
