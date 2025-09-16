@@ -27,7 +27,7 @@ export default function Banner() {
   }
 
   return (
-    <div className="w-11/12 mx-auto h-[400px] md:h-[500px] lg:h-[550px] rounded-lg relative overflow-hidden">
+    <div className="w-11/12 mx-auto h-[420px] md:h-[500px] lg:h-[550px] rounded-lg relative overflow-hidden">
 
       {/* Banner Image */}
       {images.map((img, index) => (
@@ -71,7 +71,7 @@ export default function Banner() {
           </button>
         </div>
 
-        <div className="space-x-4 flex justify-center lg:justify-end items-center lg:absolute bottom-15 right-20 mt-3 lg:mt-0">
+        <div className="space-x-4 flex justify-center lg:justify-end items-center lg:absolute bottom-15 right-20 mt-8 lg:mt-0">
           <button
             onClick={prevSlide}
             className="bg-[#FFFFFF33] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft /></button>
