@@ -6,7 +6,7 @@ export default function AboutUs() {
     <div className="w-11/12 mx-auto my-16 lg:my-25 flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 lg:gap-16">
 
       {/* Left side images */}
-      <div className="relative w-full lg:w-1/2 flex justify-center">
+      <div className="relative w-full lg:w-1/2 ">
         {/* Main image */}
         <div className="relative w-[100%] sm:w-[460px] h-[250px] sm:h-[380px] rounded-lg overflow-hidden">
           <Image
