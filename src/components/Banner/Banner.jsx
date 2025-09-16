@@ -1,19 +1,46 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 
+const images = [
+  "/assets/images/banner/1.jpg",
+  "/assets/images/banner/2.jpg",
+  "/assets/images/banner/3.jpg",
+  "/assets/images/banner/4.jpg",
+  "/assets/images/banner/5.jpg",
+  "/assets/images/banner/6.jpg",
+
+]
+
 export default function Banner() {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+  }
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+  }
+
   return (
     <div className="w-11/12 mx-auto h-[400px] md:h-[500px] lg:h-[550px] rounded-lg relative overflow-hidden">
 
       {/* Banner Image */}
-      <Image
-        src="/assets/images/banner/5.jpg"
-        alt="banner"
-        fill
-        className="object-cover"
-        priority
-      />
+      {images.map((img, index) => (
+        <Image
+          key={index}
+          src={img}
+          alt="banner"
+          fill
+          className={`object-cover absolute inset-0 transition-opacity duration-700 ease-in-out ${index === currentSlide ? "opacity-100" : "opacity-0"
+            }`}
+          priority
+        />
+      ))}
 
       {/* Gradient Overlay */}
       <div
@@ -45,8 +72,12 @@ export default function Banner() {
         </div>
 
         <div className="space-x-4 flex justify-center lg:justify-end items-center lg:absolute bottom-15 right-20 mt-3 lg:mt-0">
-          <button className="bg-[#FFFFFF33] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft /></button>
-          <button className="bg-[#FF3811] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft className="transform rotate-180" /></button>
+          <button
+            onClick={prevSlide}
+            className="bg-[#FFFFFF33] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft /></button>
+          <button
+            onClick={nextSlide}
+            className="bg-[#FF3811] p-2 lg:p-4 rounded-full text-white cursor-pointer"><GoArrowLeft className="transform rotate-180" /></button>
         </div>
 
       </div>
