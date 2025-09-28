@@ -3,6 +3,7 @@ import Banner from "@/components/Banner/Banner";
 import ContactCard from "@/components/ContactCard/ContactCard";
 import MeetOurTeam from "@/components/MeetOurTeam/MeetOurTeam";
 import OurService from "@/components/OurService/OurService";
+import Testimonial from "@/components/Testimonial/Testimonial";
 import WhyChooseUs from "@/components/WhyChooseUs/WhyChooseUs";
 import Image from "next/image";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <ContactCard></ContactCard>
       <MeetOurTeam></MeetOurTeam>
       <WhyChooseUs></WhyChooseUs>
+      <Testimonial></Testimonial>
     </div>
   );
 }
