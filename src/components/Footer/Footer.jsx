@@ -10,8 +10,9 @@ export default function Footer() {
 
         {/* left */}
         <div >
-          <Image src={"/assets/logo.svg"} width={70} height={70} />
-          <p className='text-[#E8E8E8] my-5'>Edwin Diaz is a software and web technologies engineer, a life coach trainer who is also a serial .</p>
+          <Image src={"/assets/icons/footer_logo.png"} width={80} height={80} />
+          <p className='text-[#E8E8E8] my-5 text-justify'>Car Doctor provides trusted auto repair and maintenance services with expert technicians and modern equipment. Your car’s health is our priority.
+          </p>
 
           {/* Social icons */}
           <div className='flex justify-start items-center gap-2'>
