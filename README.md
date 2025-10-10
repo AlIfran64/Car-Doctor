@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Car Doctor - A Vehicle Service Management
 
-## Getting Started
+**Car Doctor** is a modern full-stack web application designed to simplify vehicle service management. Users can browse car repair services, book appointments, and manage their service history seamlessly — all within a responsive and interactive interface.
 
-First, run the development server:
+🔗 **Live Demo:** [car-doctor-eta-three.vercel.app](https://car-doctor-eta-three.vercel.app/)  
+📂 **Github Repository:** [github.com/AlIfran64/Car-Doctor](https://github.com/AlIfran64/Car-Doctor)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [https://car-doctor-eta-three.vercel.app](https://car-doctor-eta-three.vercel.app) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### **Frontend**
+- React.js
+- Next.js (App Router)
+- Tailwind CSS
+- Next-Auth (Authentication)
+- React Hot Toast (User Notifications)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Backend**
+- Node.js
+- Express.js
+- NextAuth JWT Middleware
+- RESTful API
 
-## Learn More
+### **Database**
+- MongoDB Atlas
 
-To learn more about Next.js, take a look at the following resources:
+### **Others**
+- Vercel (Deployment)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- **Browse Services** – Explore available car repair & maintenance services.  
+- **User Authentication** – Secure login/register using **NextAuth**.    
+- **Manage Bookings** – View, update, or delete existing bookings.  
+- **Checkout System** – Simple booking confirmation.  
+- **Fully Responsive** – Works seamlessly on all devices.  
+- **Fast & Secure API** – Built with Express.js and NextAuth JWT protection.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
