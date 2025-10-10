@@ -5,99 +5,41 @@ export default function WhyChooseUs() {
   return (
     <div className='w-11/12 mx-auto my-16 lg:my-25'>
       {/* Header */}
-      <h1 className='text-[#FF3811] text-xl font-bold text-center mb-5'>Core Features</h1>
-      <p className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 text-center'>Why Choose Us</p>
-      <p className='text-base font-normal text-[#737373] text-center'>
-        The majority have suffered alteration in some form, by injected humour, or randomised <br />
+      <h1 className='text-[#FF3811] text-lg sm:text-xl font-bold text-center mb-2 sm:mb-5'>Core Features</h1>
+      <p className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-5 text-center'>Why Choose Us</p>
+      <p className='text-sm sm:text-base font-normal text-[#737373] text-center'>
+        The majority have suffered alteration in some form, by injected humour, or randomised <br className='hidden sm:block' />
         words which don't look even slightly believable.
       </p>
 
       {/* Grid */}
-      <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mt-6 lg:mt-12'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-6 lg:mt-12'>
 
-        {/* Expert Team */}
-        <div className='border border-[#E8E8E8] p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'>
-          {/* Image container */}
-          <div className='w-16 h-16 relative'>
-            <Image
-              src={"/assets/icons/group.svg"}
-              alt="Expert Team"
-              fill
-              className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
-            />
+        {[
+          { title: "Expert Team", src: "/assets/icons/group.svg" },
+          { title: "Timely Delivery", src: "/assets/icons/watch.png" },
+          { title: "24/7 Support", src: "/assets/icons/person.svg" },
+          { title: "Best Equipment", src: "/assets/icons/Wrench.svg" },
+          { title: "100% Guaranty", src: "/assets/icons/check.svg" },
+          { title: "Fast Delivery", src: "/assets/icons/deliveryt.svg" },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className='border border-[#E8E8E8] p-4 sm:p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'
+          >
+            <div className='w-12 h-12 sm:w-16 sm:h-16 relative'>
+              <Image
+                src={item.src}
+                alt={item.title}
+                fill
+                className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
+              />
+            </div>
+            <p className='text-sm sm:text-lg font-bold mt-3 sm:mt-5 text-center transition group-hover:text-white'>
+              {item.title}
+            </p>
           </div>
-
-          {/* Text */}
-          <p className='text-lg font-bold mt-5 text-center transition group-hover:text-white'>
-            Expert Team
-          </p>
-        </div>
-
-
-        {/* Timely Delivery */}
-        <div className='border border-[#E8E8E8] p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'>
-          <div className='w-16 h-16 relative'>
-            <Image
-              src={"/assets/icons/watch.png"}
-              alt="Timely Delivery"
-              fill
-              className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
-            />
-          </div>
-          <p className='text-lg font-bold mt-5 text-center transition group-hover:text-white'>Timely Delivery</p>
-        </div>
-
-        {/* 24/7 Support */}
-        <div className='border border-[#E8E8E8] p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'>
-          <div className='w-16 h-16 relative'>
-            <Image
-              src={"/assets/icons/person.svg"}
-              alt="24/7 Support"
-              fill
-              className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
-            />
-          </div>
-          <p className='text-lg font-bold mt-5 text-center transition group-hover:text-white'>24/7 Support</p>
-        </div>
-
-        {/* Best Equipment */}
-        <div className='border border-[#E8E8E8] p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'>
-          <div className='w-16 h-16 relative'>
-            <Image
-              src={"/assets/icons/Wrench.svg"}
-              alt="Best Equipment"
-              fill
-              className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
-            />
-          </div>
-          <p className='text-lg font-bold mt-5 text-center transition group-hover:text-white'>Best Equipment</p>
-        </div>
-
-        {/* 100% Guaranty */}
-        <div className='border border-[#E8E8E8] p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'>
-          <div className='w-16 h-16 relative'>
-            <Image
-              src={"/assets/icons/check.svg"}
-              alt="100% Guaranty"
-              fill
-              className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
-            />
-          </div>
-          <p className='text-lg font-bold mt-5 text-center transition group-hover:text-white'>100% Guaranty</p>
-        </div>
-
-        {/* Timely Delivery */}
-        <div className='border border-[#E8E8E8] p-5 rounded-lg flex flex-col items-center cursor-pointer group transition hover:bg-[#FF3811]'>
-          <div className='w-16 h-16 relative'>
-            <Image
-              src={"/assets/icons/deliveryt.svg"}
-              alt="Timely Delivery"
-              fill
-              className='object-contain transition duration-300 group-hover:filter group-hover:brightness-0 group-hover:invert'
-            />
-          </div>
-          <p className='text-lg font-bold mt-5 text-center transition group-hover:text-white'>Timely Delivery</p>
-        </div>
+        ))}
       </div>
     </div>
   );

@@ -7,14 +7,20 @@ export default function Register() {
     <div className='mt-10 mb-20'>
       <div className='w-11/12 mx-auto flex flex-col lg:flex-row items-center justify-center gap-10'>
 
-        {/* left */}
-        <div className='w-1/2 hidden lg:block'>
-          <Image src={"/assets/images/login/login.svg"} width={600} height={500} alt='register'></Image>
+        {/* left image */}
+        <div className='w-full lg:w-1/2 flex justify-center'>
+          <Image
+            src="/assets/images/login/login.svg"
+            width={600}
+            height={500}
+            alt='register'
+            className="w-full max-w-[600px] h-auto"
+          />
         </div>
 
-        {/* right */}
-        <div className='w-1/2 hidden lg:block'>
-          <RegisterForm></RegisterForm>
+        {/* right form */}
+        <div className='w-full lg:w-1/2 flex justify-center'>
+          <RegisterForm />
         </div>
       </div>
     </div>

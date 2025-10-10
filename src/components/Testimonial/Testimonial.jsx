@@ -106,7 +106,7 @@ export default function Testimonial() {
       </div>
 
       {/* Buttons */}
-      <div className='relative'>
+      <div className='relative hidden lg:block'>
         <button
           className="bg-[#F3F3F3] p-2 lg:p-4 rounded-full text-white cursor-pointer absolute -top-40 -left-7"><GoArrowLeft className='text-[#444444]' /></button>
         <button

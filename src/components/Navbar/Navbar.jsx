@@ -23,9 +23,7 @@ export default function Navbar() {
         {/* Middle */}
         <div className="space-x-10 text-base font-semibold">
           <Link className="hover:text-[#FF3811]" href={"/"}>Home</Link>
-          <Link className="hover:text-[#FF3811]" href={"/about"}>About</Link>
-          <Link className="hover:text-[#FF3811]" href={"/services"}>Services</Link>
-          <Link className="hover:text-[#FF3811]" href={"/blog"}>Blog</Link>
+          <Link className="hover:text-[#FF3811]" href={"/#services"}>Services</Link>
           <Link className="hover:text-[#FF3811]" href={"/my-bookings"}>My Bookings</Link>
         </div>
 
@@ -159,9 +157,7 @@ export default function Navbar() {
                 {/* Navigation */}
                 <div className="flex flex-col text-center space-y-3">
                   <Link href={"/"} onClick={() => setMenuOpen(false)}>Home</Link>
-                  <Link href={"/about"} onClick={() => setMenuOpen(false)}>About</Link>
-                  <Link href={"/services"} onClick={() => setMenuOpen(false)}>Services</Link>
-                  <Link href={"/blog"} onClick={() => setMenuOpen(false)}>Blog</Link>
+                  <Link href={"/#services"} onClick={() => setMenuOpen(false)}>Services</Link>
                   <Link href={"/my-bookings"} onClick={() => setMenuOpen(false)}>My Bookings</Link>
                 </div>
 
