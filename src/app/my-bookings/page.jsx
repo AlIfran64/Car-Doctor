@@ -4,8 +4,8 @@ import { headers } from 'next/headers';
 import React from 'react'
 
 const fetchMyBookings = async () => {
-  const res = await fetch('http://localhost:3000/api/service', {
-    headers: await headers()
+  const res = await fetch('https://car-doctor-eta-three.vercel.app/api/service', {
+    headers: new Headers(await headers())
   });
   const d = await res.json();
   return d;
