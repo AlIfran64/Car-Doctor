@@ -112,7 +112,7 @@ export default function BookingUpdateForm({ data }) {
         {/* Submit Button */}
         <button
           type="submit"
-          className="bg-[#FF3811] hover:bg-[#da4628] text-white px-6 py-3 rounded-lg col-span-1 sm:col-span-2 font-semibold transition-all duration-200"
+          className="bg-[#FF3811] hover:bg-[#da4628] text-white px-6 py-3 rounded-lg col-span-1 sm:col-span-2 font-semibold transition-all duration-200 cursor-pointer"
         >
           Update Booking
         </button>

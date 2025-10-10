@@ -97,7 +97,7 @@ export default function CheckoutForm({ data }) {
 
         {/* Submit Button */}
         <button
-          className='bg-[#FF3811] hover:bg-[#da4628] text-white px-6 py-3 rounded-lg col-span-1 lg:col-span-2 w-full font-semibold mt-2'
+          className='bg-[#FF3811] hover:bg-[#da4628] text-white px-6 py-3 rounded-lg col-span-1 lg:col-span-2 w-full font-semibold mt-2 cursor-pointer'
           type='submit'>
           Order Confirm
         </button>
