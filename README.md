@@ -1,6 +1,6 @@
 # Car Doctor - A Vehicle Service Management
 
-**Car Doctor** is a modern full-stack web application built with Next.Js designed to simplify vehicle service management. Users can browse car repair services, book appointments, and manage their service history seamlessly all within a responsive and interactive interface.
+**Car Doctor** is a modern full-stack web application built with Next.Js designed to simplify vehicle service management. Users can browse car repair services, and manage their service history seamlessly all within a responsive and interactive interface.
 
 🔗 **Live Demo:** [car-doctor-eta-three.vercel.app](https://car-doctor-eta-three.vercel.app/)  
 📂 **Github Repository:** [github.com/AlIfran64/Car-Doctor](https://github.com/AlIfran64/Car-Doctor)
