@@ -10,7 +10,7 @@ export default function Footer() {
 
         {/* left */}
         <div >
-          <Image src={"/assets/icons/footer_logo.png"} width={80} height={80} />
+          <Image src={"/assets/icons/footer_logo.png"} width={80} height={80} alt='footer_img' />
           <p className='text-[#E8E8E8] my-5 text-justify'>Car Doctor provides trusted auto repair and maintenance services with expert technicians and modern equipment. Your car’s health is our priority.
           </p>
 
@@ -20,28 +20,28 @@ export default function Footer() {
             {/* google */}
             <Link href={"https://www.google.com"}>
               <div className='p-2 bg-neutral-800 rounded-full cursor-pointer'>
-                <Image src={"/assets/icons/google.png"} width={20} height={20} />
+                <Image src={"/assets/icons/google.png"} width={20} height={20} alt='google' />
               </div>
             </Link>
 
             {/* twitter */}
             <Link href={"https://www.twitter.com"}>
               <div className='p-2 bg-neutral-800 rounded-full cursor-pointer'>
-                <Image src={"/assets/icons/twitter.png"} width={20} height={20} />
+                <Image src={"/assets/icons/twitter.png"} width={20} height={20} alt='twitter' />
               </div>
             </Link>
 
             {/* Instagram*/}
             <Link href={"https://www.instagram.com"}>
               <div className='p-2 bg-neutral-800 rounded-full cursor-pointer'>
-                <Image src={"/assets/icons/instagram.png"} width={20} height={20} />
+                <Image src={"/assets/icons/instagram.png"} width={20} height={20} alt='instagram' />
               </div>
             </Link>
 
             {/* Linkedin */}
             <Link href={"https://www.linkedin.com"}>
               <div className='p-2 bg-neutral-800 rounded-full cursor-pointer'>
-                <Image src={"/assets/icons/linkedin.png"} width={20} height={20} />
+                <Image src={"/assets/icons/linkedin.png"} width={20} height={20} alt='linkedin' />
               </div>
             </Link>
 

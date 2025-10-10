@@ -14,7 +14,7 @@ export default function MeetOurTeam() {
 
         {/* card-1 */}
         <div className='p-6 border border-[#E8E8E8] rounded-lg'>
-          <Image className='rounded-lg' src={"/assets/images/team/1.jpg"} width={314} height={293}></Image>
+          <Image className='rounded-lg' src={"/assets/images/team/1.jpg"} width={314} height={293} alt='team'></Image>
 
           <h1 className='text-center text-2xl font-bold mt-4'>Car Engine Plug</h1>
           <p className='text-center text-lg font-semibold text-[#737373]'>Engine Expert</p>
@@ -44,7 +44,7 @@ export default function MeetOurTeam() {
 
         {/* card-2 */}
         <div className='p-6 border border-[#E8E8E8] rounded-lg'>
-          <Image className='rounded-lg' src={"/assets/images/team/2.jpg"} width={314} height={293}></Image>
+          <Image className='rounded-lg' src={"/assets/images/team/2.jpg"} width={314} height={293} alt='team'></Image>
 
           <h1 className='text-center text-2xl font-bold mt-4'>Car Engine Plug</h1>
           <p className='text-center text-lg font-semibold text-[#737373]'>Engine Expert</p>
@@ -74,7 +74,7 @@ export default function MeetOurTeam() {
 
         {/* card-3 */}
         <div className='p-6 border border-[#E8E8E8] rounded-lg'>
-          <Image className='rounded-lg' src={"/assets/images/team/3.jpg"} width={314} height={293}></Image>
+          <Image className='rounded-lg' src={"/assets/images/team/3.jpg"} width={314} height={293} alt='team'></Image>
 
           <h1 className='text-center text-2xl font-bold mt-4'>Car Engine Plug</h1>
           <p className='text-center text-lg font-semibold text-[#737373]'>Engine Expert</p>

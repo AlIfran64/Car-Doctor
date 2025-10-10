@@ -1,4 +1,5 @@
 "use client";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -7,6 +8,8 @@ import { RxCross2 } from "react-icons/rx";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { data: session, status } = useSession();
+  console.log(session);
 
   return (
     <div>
@@ -23,7 +26,7 @@ export default function Navbar() {
           <Link className="hover:text-[#FF3811]" href={"/about"}>About</Link>
           <Link className="hover:text-[#FF3811]" href={"/services"}>Services</Link>
           <Link className="hover:text-[#FF3811]" href={"/blog"}>Blog</Link>
-          <Link className="hover:text-[#FF3811]" href={"/contact"}>Contact</Link>
+          <Link className="hover:text-[#FF3811]" href={"/my-bookings"}>My Bookings</Link>
         </div>
 
         {/* Right */}
@@ -67,6 +70,20 @@ export default function Navbar() {
               />
             </svg>
           </div>
+
+          {/* Conditional btn */}
+          {status == "authenticated" ?
+            (<button onClick={() => signOut()} className="text-[#FF3811] font-semibold text-lg px-4 py-2 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer">
+              Logout
+            </button>)
+            :
+            (<Link href={"/login"}>
+              <button className="text-[#FF3811] font-semibold text-lg px-4 py-2 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer">
+                Login
+              </button>
+            </Link>)
+          }
+
 
           <button className="text-[#FF3811] font-semibold text-lg px-4 py-2 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer">
             Appointment
@@ -127,7 +144,7 @@ export default function Navbar() {
 
           {/* Hamburger and cancel function */}
           {menuOpen ? (
-            <div>
+            <div className="z-50">
               <div className="absolute top-0 right-0 h-screen w-50 bg-white shadow-lg p-5 space-y-3 text-base font-semibold">
 
                 {/* Cancel btn */}
@@ -145,14 +162,31 @@ export default function Navbar() {
                   <Link href={"/about"} onClick={() => setMenuOpen(false)}>About</Link>
                   <Link href={"/services"} onClick={() => setMenuOpen(false)}>Services</Link>
                   <Link href={"/blog"} onClick={() => setMenuOpen(false)}>Blog</Link>
-                  <Link href={"/contact"} onClick={() => setMenuOpen(false)}>Contact</Link>
+                  <Link href={"/my-bookings"} onClick={() => setMenuOpen(false)}>My Bookings</Link>
                 </div>
 
                 {/* other btn */}
                 <div className="flex justify-center">
+
+
                   <button className="text-[#FF3811] font-semibold text-base px-4 py-1.5 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer transition">
                     Appointment
                   </button>
+                </div>
+
+                <div className="flex justify-center">
+                  {/* Conditional btn */}
+                  {status == "authenticated" ?
+                    (<button onClick={() => signOut()} className="text-[#FF3811] font-semibold text-base px-4 py-1.5 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer transition">
+                      Logout
+                    </button>)
+                    :
+                    (<Link href={"/login"}>
+                      <button className="text-[#FF3811] font-semibold text-base px-4 py-1.5 border-2 border-[#FF3811] rounded-lg hover:text-white hover:bg-[#FF3811] cursor-pointer transition">
+                        Login
+                      </button>
+                    </Link>)
+                  }
                 </div>
               </div>
             </div>
